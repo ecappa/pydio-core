@@ -329,6 +329,42 @@
                     </div>
 				</div>
 			]]></template>
+	<template name="widget_orbit" element="ajxp_widget" position="top" theme="orbit"><![CDATA[
+				<div id="toolbars">
+    			    <div id="buttons_bar" class="action_bar" ajxpClass="ActionsToolbar"
+    			    ajxpOptions='{
+    			        "toolbarsList":["put", "get"],
+    			        "groupOtherToolbars":["more", "change", "remote"],
+    			        "groupOtherLabel":"More",
+    			        "skipBubbling":true,
+    			        "skipCarousel":true,
+    			        "submenuOffsetTop":2
+    			        }'>
+    			    </div>
+				</div>
+				<div id="browser" ajxpClass="AjxpPane" ajxpOptions='{"fit":"height","fitParent":"ajxp_desktop"}'>
+                    <div id="cpane_container" ajxpClass="AjxpPane" ajxpOptions='{"fit":"height","fitParent":"browser"}'>
+                        <div id="cpane_header" class="panelHeader">
+                            <div id="display_toolbar" ajxpClass="ActionsToolbar" ajxpOptions='{"submenuClassName":"panelHeaderMenu","submenuPosition":"bottom right","submenuOffsetTop":12,"toolbarsList":["default"],"skipBubbling":true, "skipCarousel":true,"submenuOffsetTop":2}'></div>
+                            <div id="breadcrumb" ajxpClass="Breadcrumb" style="width:50%;" ajxpOptions='{"flexTo":"cpane_header", "flexToMargin":30}'></div>
+                        </div>
+                        <div id="content_pane" ajxpClass="FilesList"
+                            ajxpOptions='{
+                                "displayMode":"detail",
+                                "detailThumbSize": 50 ,
+                                "replaceScroller":true,
+                                "messageBoxReference":true,
+                                "fit":"height",
+                                "fitParent":"cpane_container1",
+                                "cellPaddingCorrection":6,
+                                "iconBgPosition" : "5px 4px",
+                                "invisibleSelection":false
+                                }'
+                                style="border: 1px solid #bbb; border-width:0 1px;">
+                            </div>
+                    </div>
+				</div>
+			]]></template>		
             <template name="minisite_orbit" element="ajxp_shared_folder" position="top" label="share_center.153" theme="orbit"><![CDATA[
                 <style>
                     div#overlay.form-login_form_dynamic {
